@@ -8,9 +8,15 @@ Inside the [`<ArweaveWalletKit>`](setup.md#setup-provider), you can use all kind
 
 ## `useConnection`
 
-The core hook for connecting / disconnecting a [strategy](./#terminology).
+This is the core hook for connecting / disconnecting a [strategy](./#terminology).
 
-**Usage**
+To use the different functionalities the various Arweave wallets provide, you need to request permissions from the user to interact with their wallets. This can be done with the `connect()` function.
+
+To end the current ArConnect session for the user, you can disconnect from the extension, using the `disconnect()` function. This removes all permissions from your application.
+
+The `connected` function is simply a boolean for checking whether the user is connected with the application.
+
+### Usage
 
 ```ts
 const { connected, connect, disconnect } = useConnection();
@@ -27,9 +33,9 @@ connected ? "wallet connected" : "no connected wallet";
 
 ## `useApi`
 
-API hook. Returns the active [strategy](./#terminology)'s API as an intractable object. Can be used to sign/encrypt, etc.
+The API hook returns the active [strategy](./#terminology)'s API as an intractable object. Can be used to sign/encrypt, etc.
 
-**Usage**
+### Usage
 
 ```ts
 const api = useApi();
@@ -42,12 +48,12 @@ await api.encrypt(...)
 ```
 
 {% hint style="warning" %}
-Some API functions might not be supported depending on the strategy the user chose. (e.g.: Othent does not support the `signature()` function.
+The available API functions may vary depending on the chosen strategy.
 {% endhint %}
 
 ## `useProfileModal`
 
-Toggle / display a modal with profile information and a disconnect button.
+Toggle visibility (display/ hide) a modal with the connected user’s profile information and a disconnect button.
 
 ```ts
 const profileModal = useProfileModal();
@@ -57,9 +63,9 @@ profileModal.setOpen(true);
 
 ## `useActiveAddress`
 
-Active address hook. Requires the [`ACCESS_ADDRESS`](https://docs.arconnect.io/api/connect#permissions) and the [`ACCESS_ALL_ADDRESSES`](https://docs.arconnect.io/api/connect#permissions) permission.
+The Active address hook returns the address that is currently connected with the application. It requires the [`ACCESS_ADDRESS`](https://docs.arconnect.io/api/connect#permissions) and the [`ACCESS_ALL_ADDRESSES`](https://docs.arconnect.io/api/connect#permissions) permission.
 
-**Usage**
+### Usage
 
 ```ts
 const address = useActiveAddress();
@@ -67,9 +73,9 @@ const address = useActiveAddress();
 
 ## `usePublicKey`
 
-Active address hook. Requires the [`ACCESS_PUBLIC_KEY`](https://docs.arconnect.io/api/connect#permissions) permission.
+The Active address hook returns the public key that is currently connected with the application. It requires the [`ACCESS_PUBLIC_KEY`](https://docs.arconnect.io/api/connect#permissions) permission.
 
-**Usage**
+### Usage
 
 ```ts
 const publicKey = usePublicKey();
@@ -77,9 +83,9 @@ const publicKey = usePublicKey();
 
 ## `usePermissions`
 
-Permissions hook. Returns the permissions given to the app, known by Arweave Wallet Kit.
+The Permissions hook returns the permissions given to the application by the connected user.
 
-**Usage**
+### Usage
 
 ```ts
 const permissions = usePermissions();
@@ -87,9 +93,9 @@ const permissions = usePermissions();
 
 ## `useAddresses`
 
-All addresses hook. Returns the addresses in the connected wallet, known by Arweave Wallet Kit. Requires the [`ACCESS_ALL_ADDRESSES`](https://docs.arconnect.io/api/connect#permissions) permission.
+This hook returns all the addresses in the connected wallet, known by Arweave Wallet Kit. This is useful for fetching all the addresses a connected user may have. It requires the [`ACCESS_ALL_ADDRESSES`](https://docs.arconnect.io/api/connect#permissions) permission.
 
-**Usage**
+### Usage
 
 ```ts
 const addresses = useAddresses();
@@ -97,9 +103,9 @@ const addresses = useAddresses();
 
 ## `useWalletNames`
 
-All addresses hook. Returns the addresses in the connected wallet, known by Arweave Wallet Kit. Requires the [`ACCESS_ALL_ADDRESSES`](https://docs.arconnect.io/api/connect#permissions) permission.
+This hook returns any names associated with all the addresses the connected user may have. An example of these names are ANS names that can be associated with any Arweave wallet addresses. It requires the [`ACCESS_ALL_ADDRESSES`](https://docs.arconnect.io/api/connect#permissions) permission.
 
-**Usage**
+### Usage
 
 ```ts
 const walletNames = useWalletNames();
@@ -109,7 +115,7 @@ const walletNames = useWalletNames();
 
 Active [strategy](./) hook. Returns the currently used strategy's ID (["arconnect"](https://arconnect.io), [`"webwallet"`](https://arweave.app), etc.)
 
-**Usage**
+### Usage
 
 ```ts
 const strategy = useStrategy();
