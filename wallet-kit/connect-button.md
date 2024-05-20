@@ -4,11 +4,11 @@ description: The Connect Button provides an option to easily integrate the Walle
 
 # Connect Button
 
-The `<ConnectButton>` component is a highly customizable button that supports the [ANS](https://ans.gg) protocol to display information about the connected wallet.
+The `<ConnectButton>` component is a highly customizable button that supports the [ANS](https://ans.gg) protocol to display information about the connected wallet. It comes as part of the `@arweave-wallet-kit/react` package.
 
 ## Usage
 
-After importing the component, you can use it anywhere in your React application:
+You can import and use the component anywhere in your React application as follows:
 
 ```tsx
 <ConnectButton

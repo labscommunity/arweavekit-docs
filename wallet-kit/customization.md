@@ -10,17 +10,41 @@ Custom configuration can be applied using the Wallet Kit Provider:
 
 ```tsx
 ...
-  <ArweaveWalletKit
-    config={{
-      permissions: ["ACCESS_ADDRESS"],
-      ensurePermissions: true,
-      ...
-    }}
-    theme={{
-      accent: { r: 255, g: 0, b: 0 },
-      ...
-    }}
-  >
+   <ArweaveWalletKit
+      theme={{
+        displayTheme: "light",
+        accent: {
+          r: 0,
+          g: 0,
+          b: 0
+        },
+        titleHighlight: {
+          r: 0,
+          g: 122,
+          b: 255
+        },
+        radius: "default"
+      }}
+      config={{
+        strategies: [
+          new ArConnectStrategy(),
+          new WebWalletStrategy(),
+          new OthentStrategy(),
+          new BrowserWalletStrategy()
+        ],
+        permissions: ["ACCESS_ADDRESS", "ACCESS_ALL_ADDRESSES"],
+        ensurePermissions: true,
+        appInfo: {
+          name: "Test App",
+          logo: "https://arweave.net/tQUcL4wlNj_NED2VjUGUhfCTJ6pDN9P0e3CbnHo3vUE"
+        },
+        gatewayConfig: {
+          host: "arweave.net",
+          port: 443,
+          protocol: "https"
+        }
+      }}
+    >
     <YourApp />
   </ArweaveWalletKit>
 ...

@@ -10,12 +10,15 @@
 * [Create Wallet](wallets/create-wallet.md)
 * [Get Wallet Address](wallets/get-wallet-address.md)
 * [Get Wallet Balance](wallets/get-wallet-balance.md)
-* [Wallet Kit](wallets/wallet-kit/README.md)
-  * [Setup](wallets/wallet-kit/setup.md)
-  * [Customization](wallets/wallet-kit/customization.md)
-  * [Hooks](wallets/wallet-kit/hooks.md)
-  * [Connect Button](wallets/wallet-kit/connect-button.md)
 * [Wallet Plugins](wallets/wallet-plugins.md)
+
+## 💳 ARWEAVE WALLET KIT
+
+* [Introduction to Arweave Wallet Kit](wallet-kit/introduction.md)
+* [Setup](wallet-kit/setup.md)
+* [Connect Button](wallet-kit/connect-button.md)
+* [Hooks](wallet-kit/hooks.md)
+* [Customization](wallet-kit/customization.md)
 
 ## 🏦 Transactions
 
