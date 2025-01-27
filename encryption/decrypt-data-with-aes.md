@@ -4,7 +4,7 @@ description: Decrypt Data with the Advanced Encryption Standard (AES)
 
 # Decrypt Data with AES
 
-The `decryptDatawithAES` performs symmetric encryption using the [Advanced Encryption Standard (AES)](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), specifically the Galois/ Counter Mode (GCM).
+The `decryptDataWithAES` performs symmetric encryption using the [Advanced Encryption Standard (AES)](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), specifically the Galois/ Counter Mode (GCM).
 
 The `AES` key and the random initialized vector (`iv`) used at the time of encryption are needed to decrypt the data.
 
@@ -15,9 +15,9 @@ The `iv` is part of the `combinedArrayBuffer` returned as the encrypted data fro
 The function is called as follows:
 
 ```javascript
-import { decryptDatawithAES } from 'arweavekit/encryption';
+import { decryptDataWithAES } from 'arweavekit/encryption';
 
-const decryptedDataObject = await decryptDatawithAES({params});
+const decryptedDataObject = await decryptDataWithAES({params});
 ```
 
 ### Input Parameters
@@ -32,7 +32,7 @@ The following params are available for this function and they must be passed in 
 <summary>Example</summary>
 
 ```javascript
-const decryptedDataObject = await decryptDatawithAES({
+const decryptedDataObject = await decryptDataWithAES({
     data: ArrayBuffer,
     key: string,
 });
@@ -47,10 +47,7 @@ This encrypts the provided `ArrayBuffer` using the `AES-GCM` encryption method.
 The function call returns the following data:
 
 ```bash
-{
-    rawEncryptedKeyAsBase64: Base64 string,
-    combinedArrayBuffer: ArrayBuffer,
-}
+decryptedData: ArrayBuffer
 ```
 
 * `decryptedData: ArrayBuffer` : The decrypted data returned as an `ArrayBuffer`.

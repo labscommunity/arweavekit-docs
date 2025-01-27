@@ -4,7 +4,7 @@ description: Encrypt Data with the Advanced Encryption Standard (AES)
 
 # Encrypt Data with AES
 
-The `encryptDatawithAES` performs symmetric encryption using the [Advanced Encryption Standard (AES)](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), specifically the Galois/ Counter Mode (GCM). Symmetric encryption is optimal for data encryption and performs the encryption and decryption of data with a single key.
+The `encryptDataWithAES` performs symmetric encryption using the [Advanced Encryption Standard (AES)](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), specifically the Galois/ Counter Mode (GCM). Symmetric encryption is optimal for data encryption and performs the encryption and decryption of data with a single key.
 
 A new `AES` key is generated each time the function is called. The data is encrypted using this key and a randomly generated initialized vector (`iv`).&#x20;
 
@@ -15,9 +15,9 @@ The `iv` is required for decryption as well, hence it is returned prepended to t
 The function is called as follows:
 
 ```javascript
-import { encryptDatawithAES } from 'arweavekit/encryption';
+import { encryptDataWithAES } from 'arweavekit/encryption';
 
-const encryptedDataObject = await encryptDatawithAES({params});
+const encryptedDataObject = await encryptDataWithAES({params});
 ```
 
 ### Input Parameters
@@ -31,7 +31,7 @@ The following params are available for this function and they must be passed in 
 <summary>Example</summary>
 
 ```javascript
-const encryptedDataObject = await encryptDatawithAES({
+const encryptedDataObject = await encryptDataWithAES({
     data: ArrayBuffer,
 });
 ```
