@@ -8,10 +8,10 @@ As seen in the introduction, the Arweave Wallet Kit utility is distributed acros
 
 Alongside these, the strategies for each wallet have their own dedicated packages as well:
 
-- `@arweave-wallet-kit/arconnect-strategy`
-- `@arweave-wallet-kit/browser-wallet-strategy`
-- `@arweave-wallet-kit/othent-strategy`
-- `@arweave-wallet-kit/webwallet-strategy`
+* `@arweave-wallet-kit/wander-strategy`
+* `@arweave-wallet-kit/browser-wallet-strategy`
+* `@arweave-wallet-kit/othent-strategy`
+* `@arweave-wallet-kit/webwallet-strategy`
 
 You can configure one or more strategies depending on the wallets you wish to add support for.
 
@@ -24,25 +24,25 @@ Note: Currently, Arweave Wallet Kit works out of the box with ReactJS and Vite a
 We’ll be demonstrating the installation and setup for all 4 strategies. The Wallet Kit can be installed with any of the popular package managers as follows:
 
 ```sh
-npm install @arweave-wallet-kit/core @arweave-wallet-kit/react @arweave-wallet-kit/styles @arweave-wallet-kit/arconnect-strategy @arweave-wallet-kit/browser-wallet-strategy @arweave-wallet-kit/othent-strategy @arweave-wallet-kit/webwallet-strategy
+npm install @arweave-wallet-kit/core @arweave-wallet-kit/react @arweave-wallet-kit/styles @arweave-wallet-kit/wander-strategy @arweave-wallet-kit/browser-wallet-strategy @arweave-wallet-kit/othent-strategy @arweave-wallet-kit/webwallet-strategy
 ```
 
 or
 
 ```sh
-yarn add @arweave-wallet-kit/core @arweave-wallet-kit/react @arweave-wallet-kit/styles @arweave-wallet-kit/arconnect-strategy @arweave-wallet-kit/browser-wallet-strategy @arweave-wallet-kit/othent-strategy @arweave-wallet-kit/webwallet-strategy
+yarn add @arweave-wallet-kit/core @arweave-wallet-kit/react @arweave-wallet-kit/styles @arweave-wallet-kit/wander-strategy @arweave-wallet-kit/browser-wallet-strategy @arweave-wallet-kit/othent-strategy @arweave-wallet-kit/webwallet-strategy
 ```
 
 or
 
 ```sh
-pnpm add @arweave-wallet-kit/core @arweave-wallet-kit/react @arweave-wallet-kit/styles @arweave-wallet-kit/arconnect-strategy @arweave-wallet-kit/browser-wallet-strategy @arweave-wallet-kit/othent-strategy @arweave-wallet-kit/webwallet-strategy
+pnpm add @arweave-wallet-kit/core @arweave-wallet-kit/react @arweave-wallet-kit/styles @arweave-wallet-kit/wander-strategy @arweave-wallet-kit/browser-wallet-strategy @arweave-wallet-kit/othent-strategy @arweave-wallet-kit/webwallet-strategy
 ```
 
 or
 
 ```sh
-bun install @arweave-wallet-kit/core @arweave-wallet-kit/react @arweave-wallet-kit/styles @arweave-wallet-kit/arconnect-strategy @arweave-wallet-kit/browser-wallet-strategy @arweave-wallet-kit/othent-strategy @arweave-wallet-kit/webwallet-strategy
+bun install @arweave-wallet-kit/core @arweave-wallet-kit/react @arweave-wallet-kit/styles @arweave-wallet-kit/wander-strategy @arweave-wallet-kit/browser-wallet-strategy @arweave-wallet-kit/othent-strategy @arweave-wallet-kit/webwallet-strategy
 ```
 
 ## Setting Up the Provider
@@ -56,7 +56,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { ArweaveWalletKit } from "@arweave-wallet-kit/react";
-import ArConnectStrategy from "@arweave-wallet-kit/arconnect-strategy";
+import WanderStrategy from "@arweave-wallet-kit/wander-strategy";
 import OthentStrategy from "@arweave-wallet-kit/othent-strategy";
 import BrowserWalletStrategy from "@arweave-wallet-kit/browser-wallet-strategy";
 import WebWalletStrategy from "@arweave-wallet-kit/webwallet-strategy";
@@ -73,7 +73,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         ],
         ensurePermissions: true,
         strategies: [
-          new ArConnectStrategy(),
+          new WanderStrategy(),
           new OthentStrategy(),
           new BrowserWalletStrategy(),
           new WebWalletStrategy(),
@@ -88,4 +88,4 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 
 In the example above, the application is wrapped with the Arweave Wallet Kit Provider, passing it a `config` object as parameter with the desired wallet strategies and permissions based on the application requirements.
 
-Once the provider is setup, you can either use the Wallet Kit’s functionality through its custom [components](wallet-kit/connect-button.md) or [hooks](wallet-kit/hooks.md).
+Once the provider is setup, you can either use the Wallet Kit’s functionality through its custom [components](connect-button.md) or [hooks](hooks.md).

@@ -27,7 +27,7 @@ Custom configuration can be applied using the Wallet Kit Provider:
       }}
       config={{
         strategies: [
-          new ArConnectStrategy(),
+          new WanderStrategy(),
           new WebWalletStrategy(),
           new OthentStrategy(),
           new BrowserWalletStrategy()
@@ -54,12 +54,12 @@ Custom configuration can be applied using the Wallet Kit Provider:
 
 Using the `config` field of the [`<ArweaveWalletKit>`](setup.md#setup-provider) provider component, you can define a name, a logo or the required permissions for your app. The following options are available:
 
-| Prop                | Type                                                                                  | Default             | Description                                                                                                |
-| ------------------- | ------------------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `permissions`       | [`PermissionType[]`](https://docs.arconnect.io/api/connect#permissions)               | `[]`                | Permissions to connect with.                                                                               |
-| `ensurePermissions` | `boolean`                                                                             |  `false`            | Ensure that all required permissions are present. If false, it only checks if the app has any permissions. |
-| `appInfo`           | [`AppInfo`](https://docs.arconnect.io/api/connect#additional-application-information) | `{}`                | Information about your app (name/logo).                                                                    |
-| `gatewayConfig`     | [`GatewayConfig`](https://docs.arconnect.io/api/connect#custom-gateway-config)        | arweave.net gateway | Configuration for the Arweave gateway to use.                                                              |
+| Prop                | Type                                                                                | Default             | Description                                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `permissions`       | [`PermissionType[]`](https://docs.wander.app/api/connect#permissions)               | `[]`                | Permissions to connect with.                                                                               |
+| `ensurePermissions` | `boolean`                                                                           | `false`             | Ensure that all required permissions are present. If false, it only checks if the app has any permissions. |
+| `appInfo`           | [`AppInfo`](https://docs.wander.app/api/connect#additional-application-information) | `{}`                | Information about your app (name/logo).                                                                    |
+| `gatewayConfig`     | [`GatewayConfig`](https://docs.wander.app/api/connect#custom-gateway-config)        | arweave.net gateway | Configuration for the Arweave gateway to use.                                                              |
 
 ## Theming
 

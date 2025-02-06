@@ -2,17 +2,17 @@
 description: Hooks and Components for unified interaction with Arweave wallets
 ---
 
-# Wallet Kit
+# Introduction to Arweave Wallet Kit
 
-<figure><img src="../../.gitbook/assets/Docs-Kit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Arweave Wallet Kit - Wander.png" alt=""><figcaption></figcaption></figure>
 
 The Arweave Wallet Kit simplifies interactions between Arweave wallets and dApps, offering a unified API that supports any Arweave wallet. Users can easily interact with apps using their preferred wallet.
 
 The Kit is divided into multiple packages for modularity and extensibility:
 
-- A core package that is foundation for all functionality.
-- A set of React hooks and components built on the core package.
-- A styles package that complements the React hooks and components.
+* A core package that is foundation for all functionality.
+* A set of React hooks and components built on the core package.
+* A styles package that complements the React hooks and components.
 
 Support for other frameworks can be developed using the core package.
 
@@ -26,7 +26,7 @@ In Arweave Wallet Kit, a _strategy_ is an implementation of an Arweave wallet wi
 
 The library currently supports the following wallets:
 
-* [ArConnect](https://arconnect.io)
+* [Wander.app](https://www.wander.app)
 * [Arweave.app](https://arweave.app)
 * [Othent](https://othent.io/)
 * General Browser Wallets
