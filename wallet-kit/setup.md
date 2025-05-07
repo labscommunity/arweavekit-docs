@@ -13,6 +13,8 @@ Alongside these, the strategies for each wallet have their own dedicated package
 * `@arweave-wallet-kit/othent-strategy`
 * `@arweave-wallet-kit/webwallet-strategy`
 
+_Note: Othent will be deprecated by the end of 2025.  For an alternative, please check out Wander Connect:_ [_https://wander.app/connect_](https://wander.app/connect)
+
 You can configure one or more strategies depending on the wallets you wish to add support for.
 
 {% hint style="info" %}

@@ -30,3 +30,5 @@ The library currently supports the following wallets:
 * [Arweave.app](https://arweave.app)
 * [Othent](https://othent.io/)
 * General Browser Wallets
+
+_Note: Othent will be deprecated by the end of 2025.  For an alternative, please check out Wander Connect:_ [_https://wander.app/connect_](https://wander.app/connect)
