@@ -31,4 +31,6 @@ The library currently supports the following wallets:
 * [Othent](https://othent.io/)
 * General Browser Wallets
 
-_Note: Othent will be deprecated by the end of 2025.  For an alternative, please check out Wander Connect:_ [_https://wander.app/connect_](https://wander.app/connect)
+_Note: Othent will be deprecated by the end of 2025.  If you are integrating Arweave Wallet Kit into your dApp, it is recommended that you do NOT include the Othent strategy._ \
+\
+_For an Othent alternative, please check out Wander Connect:_ [_https://wander.app/connect_](https://wander.app/connect)
