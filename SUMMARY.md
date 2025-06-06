@@ -1,8 +1,28 @@
 # Table of contents
 
+## 💳 ARWEAVE WALLET KIT
+
+* [Introduction to Arweave Wallet Kit](README.md)
+* [Setup](wallet-kit/setup.md)
+* [Connect Button](wallet-kit/connect-button.md)
+* [Hooks](wallet-kit/hooks.md)
+* [Customization](wallet-kit/customization.md)
+
+## 🤖 Arweave Data Storage SDK
+
+* [Introduction to the Arweave Data Storage SDK](arweave-data-storage-sdk/introduction-to-the-arweave-data-storage-sdk.md)
+
+***
+
+* [Installation](installation.md)
+* [Usage](usage.md)
+* [Wallet](wallet.md)
+* [Configuration](configuration.md)
+* [Data Upload Service](data-upload-service.md)
+
 ## ArweaveKit
 
-* [Introduction](README.md)
+* [Introduction](<README (1).md>)
 
 ## 🔐 Wallets
 
@@ -11,14 +31,6 @@
 * [Get Wallet Address](wallets/get-wallet-address.md)
 * [Get Wallet Balance](wallets/get-wallet-balance.md)
 * [Wallet Plugins](wallets/wallet-plugins.md)
-
-## 💳 ARWEAVE WALLET KIT
-
-* [Introduction to Arweave Wallet Kit](wallet-kit/introduction.md)
-* [Setup](wallet-kit/setup.md)
-* [Connect Button](wallet-kit/connect-button.md)
-* [Hooks](wallet-kit/hooks.md)
-* [Customization](wallet-kit/customization.md)
 
 ## 🏦 Transactions
 
@@ -30,17 +42,6 @@
 * [Get Transaction](transactions/get-transaction.md)
 * [Create and Post Transaction with Othent](transactions/create-and-post-transaction-with-othent.md)
 * [Transaction Plugins](transactions/transaction-plugins.md)
-
-## 📄 SMART CONTRACTS
-
-* [Introduction to Smart Contracts](smart-contracts/introduction-to-smart-contracts.md)
-* [Create Contract](smart-contracts/create-contract.md)
-* [Write Contract](smart-contracts/write-contract.md)
-* [Read Contract State](smart-contracts/read-contract-state.md)
-* [View Contract State](smart-contracts/view-contract-state.md)
-* [Write Contract with Othent](smart-contracts/write-contract-with-othent.md)
-* [Read Contract with Othent](smart-contracts/read-contract-with-othent.md)
-* [Smart Contract Plugins](smart-contracts/smart-contract-plugins.md)
 
 ## ✅ AUTH
 
@@ -74,10 +75,6 @@
 * [Query Arweave Data](graphql/query-arweave-data.md)
 * [Query Arweave Transactions](graphql/query-arweave-transactions.md)
 * [GraphQL Plugins](graphql/graphql-plugins.md)
-
-## 🗺️ RoadMap
-
-* [Features](roadmap/features.md)
 
 ## 📘 REFERENCES
 

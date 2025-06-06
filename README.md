@@ -1,74 +1,36 @@
 ---
-description: What is ArweaveKit
+description: Hooks and Components for unified interaction with Arweave wallets
 ---
 
-# Introduction
+# Introduction to Arweave Wallet Kit
 
-_**ArweaveKit aims to lower the barrier of onboarding and building on Arweave by creating a well documented one-stop library.**_
+<figure><img src="../.gitbook/assets/Arweave Wallet Kit - Wander.png" alt=""><figcaption></figcaption></figure>
 
-### Installing the Package
+The Arweave Wallet Kit simplifies interactions between Arweave wallets and dApps, offering a unified API that supports any Arweave wallet. Users can easily interact with apps using their preferred wallet.
 
-For using any functions from the library, the package must be installed in the application.
+The Kit is divided into multiple packages for modularity and extensibility:
 
-```bash
-npm install arweavekit
-# or
-yarn add arweavekit 
-```
+* A core package that is foundation for all functionality.
+* A set of React hooks and components built on the core package.
+* A styles package that complements the React hooks and components.
 
-{% hint style="success" %}
-The latest stable version of ArweaveKit is <mark style="color:red;">`1.5.1`</mark>.
-{% endhint %}
+Support for other frameworks can be developed using the core package.
 
-### Using the Library
+The support for various wallets is modular as well. It is broken down into “strategies”, with each having its own package.
 
-After installation, individual functions from specific function types can be imported as follows:
+## Terminology
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>import { createWallet } from 'arweavekit/wallet';
-</strong>
-const wallet = await createWallet({params});
-</code></pre>
+In Arweave Wallet Kit, a _strategy_ is an implementation of an Arweave wallet within the kit. These strategies allow the user to communicate with all wallets in a standard way and with a common API.
 
-### Types of functions available&#x20;
+## Supported wallets
 
-In this library, the following types of functions are available:
+The library currently supports the following wallets:
 
-* **Wallet Functions**: Functions associated with creating and using wallets. Read more [here](wallets/introduction.md).
-* **Transaction Functions**: Functions associated with creating and interacting with transactions. Read more [here](transactions/introduction.md).
-* **Contract Functions**: Functions associated with creating and interacting with contracts. Read more [here](smart-contracts/introduction-to-smart-contracts.md).
-* **Auth Functions**: Functions associated with authentication. Read more [here](auth/introduction-to-auth.md).
-* **Encryption Functions**: Functions associated with encryption. Read more [here](encryption/introduction-to-encryption.md).
-* **GraphQL query functions**: Functions to query on-chain data using GraphQL. Read more [here](broken-reference).
+* [Wander.app](https://www.wander.app)
+* [Arweave.app](https://arweave.app)
+* [Othent](https://othent.io/)
+* General Browser Wallets
 
-### Compatibility
-
-ArweaveKit is compatible with both Node.js and Browser environments. Node.js has deprecated for `v16` and suggest upgrading applications to `v18` and above, as per this [announcement](https://x.com/nodejs/status/1701309614263001569?s=20).
-
-While ArweaveKit continues to support Node.js `v16`, a few flags must be passed in while running any scripts in order to optimally use some of ArweaveKit's latest features. If using Node.js `v16` we recommend using the following format:
-
-```bash
-node --experimental-fetch --no-warnings file-path
-```
-
-### Guide for understanding the docs
-
-Every function has a dedicated page with the following information associated with it:
-
-* A **brief description** of the function
-* The **basic syntax** for function calls
-* Any **input parameters** for the function
-  * The syntax format for input parameters is `name: type`. Some parameters have the `optional` keyword which means they are optional. Parameters that do not have this keyword are required and must be passed in for successful function calls.
-* The **returned data** for function calls
-  * The syntax format for returned data is `name: type`. Data returned can be different different depending on the combination of input parameters used.
-
-Links provided in data type descriptions may themselves link to other data types in cases of complex data objects. The most relevant bits have been explained throughout these docs but for a further understanding feel free to jump in to the rabbit hole.
-
-### Example Application Ideas
-
-Here's a list of example ideas for full-stack, end-user-facing applications you could build with `arweavekit`. These concepts leverage features of Arweave, such as decentralised data storage, pay-once store-forever pricing, transaction support, and smart contract and serverless function capabilities (using SmartWeave).
-
-* **Decentralised Blogging Platform**: Users could write and publish blog posts that are stored permanently on Arweave. It could have an interactive frontend for easy post creation, browsing, and reading.
-* **Decentralised Social Media**: A social media application where users can post text, images, and videos, create their profiles, and follow other users. All user data and interactions can be stored on Arweave.
-* **Decentralised Document Collaboration**: A collaborative document editing platform that lets users create, edit, and share documents in real-time with other collaborators. It securely stores all document data on Arweave so that multiple copies are accessible and maintained indefinitely.
-
-### Happy Building!
+_Note: Othent will be deprecated by the end of 2025.  If you are integrating Arweave Wallet Kit into your dApp, it is recommended that you do NOT include the Othent strategy._ \
+\
+_For an Othent alternative, please check out Wander Connect:_ [_https://wander.app/connect_](https://wander.app/connect)

@@ -4,11 +4,11 @@ description: React hooks that provide deeper access into the wallet APIs
 
 # Hooks
 
-Inside the [`<ArweaveWalletKit>`](setup.md#setup-provider), you can use all kinds of hooks that are reactive to the different [strategies](introduction.md#terminology). Some of the hooks and/or api functions might not be supported by all wallets.
+Inside the [`<ArweaveWalletKit>`](setup.md#setup-provider), you can use all kinds of hooks that are reactive to the different [strategies](../#terminology). Some of the hooks and/or api functions might not be supported by all wallets.
 
 ## `useConnection`
 
-This is the core hook for connecting / disconnecting a [strategy](introduction.md#terminology).
+This is the core hook for connecting / disconnecting a [strategy](../#terminology).
 
 To use the different functionalities the various Arweave wallets provide, you need to request permissions from the user to interact with their wallets. This can be done with the `connect()` function.
 
@@ -33,7 +33,7 @@ connected ? "wallet connected" : "no connected wallet";
 
 ## `useApi`
 
-The API hook returns the active [strategy](introduction.md#terminology)'s API as an intractable object. Can be used to sign/encrypt, etc.
+The API hook returns the active [strategy](../#terminology)'s API as an intractable object. Can be used to sign/encrypt, etc.
 
 ### Usage
 
@@ -113,7 +113,7 @@ const walletNames = useWalletNames();
 
 ## `useStrategy`
 
-Active [strategy](introduction.md#terminology) hook. Returns the currently used strategy's ID ([`"wander"`](https://www.wander.app/), [`"webwallet"`](https://arweave.app), etc.)
+Active [strategy](../#terminology) hook. Returns the currently used strategy's ID ([`"wander"`](https://www.wander.app/), [`"webwallet"`](https://arweave.app), etc.)
 
 ### Usage
 
