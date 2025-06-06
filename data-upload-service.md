@@ -2,13 +2,15 @@
 
 This service is used with Arweave Data Storage SDK to upload data to Arweave and pay for the storage using other chain's stablecoin tokens.
 
-Supported chains and stablecoins:
+_**Supported chains and stablecoins**_
 
-Ethereum and EVM: USDC and USDT
+_Ethereum and EVM:_ USDC and USDT
 
-Solana: USDC and USDT
+_Solana:_ USDC and USDT
 
-Cosmos: Noble
+_Cosmos:_ Noble
+
+_If you would like to request support for a stablecoin payment on a different chain, please open an issue in the github repo_ [_here_](data-upload-service.md)
 
 ### Prerequisites
 
