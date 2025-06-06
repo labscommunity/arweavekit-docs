@@ -1,6 +1,14 @@
 # Data Upload Service
 
-This service is used with Arweave Data Storage SDK to upload data to Arweave and pay for the storage using other chains tokens.
+This service is used with Arweave Data Storage SDK to upload data to Arweave and pay for the storage using other chain's stablecoin tokens.
+
+Supported chains and stablecoins:
+
+Ethereum and EVM: USDC and USDT
+
+Solana: USDC and USDT
+
+Cosmos: Noble
 
 ### Prerequisites
 
